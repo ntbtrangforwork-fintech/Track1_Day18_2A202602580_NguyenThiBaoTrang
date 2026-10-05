@@ -23,8 +23,7 @@
 | Công cụ | OpenAI Codex |
 | Mục đích | Đọc và hệ thống hóa tài liệu Day 17 (`README.md`, `interview/notes.md`), tách observation khỏi interpretation, gợi ý ba cơ chế tương tác Người–AI ở các mức quyền khác nhau, định dạng tài liệu. |
 | Kết quả AI tạo ra | Bản nháp `Chang_1_3.md`: Evidence Snapshot, Hypothesis Problem, ba Solution Options A/B/C, Human–AI Decision Table, các Gate check. |
-| Phần tự chỉnh sửa / bác bỏ | Đối chiếu từng evidence với `interview/notes.md` và timestamp của bản ghi Day 17. Đánh dấu evidence của hai thành viên còn lại là "chưa có, không được suy diễn". Chốt cơ chế A/B/C cùng nhóm trong `three-option-design-sheet.md`. *[Trang bổ sung: những gợi ý cụ thể nào của AI đã bị sửa hoặc bỏ]* |
-
+| Phần tự chỉnh sửa / bác bỏ | Đối chiếu từng evidence với `interview/notes.md` và timestamp của bản ghi Day 17. Đánh dấu evidence của hai thành viên còn lại là "chưa có, không được suy diễn". Chốt cơ chế A/B/C cùng nhóm trong `three-option-design-sheet.md`. 
 ### 2. Viết mã prototype và canned AI output
 
 | Mục | Nội dung |
