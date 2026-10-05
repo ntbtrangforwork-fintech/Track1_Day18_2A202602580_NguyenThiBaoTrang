@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Day 18 micro-prototype: ba cách phối hợp người học và AI khi chẩn đoán một điểm vướng trong Excel PivotTable.">
+  <title>VLearn Diagnostic Lab — A/B/C Prototype</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b4332'/%3E%3Cpath d='M14 16h10l8 26 8-26h10L37 50H27z' fill='%23f4d35e'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Bỏ qua điều hướng</a>
+
+  <header class="topbar">
+    <a class="brand" href="#" id="brand-home" aria-label="Về màn hình chọn phương án">
+      <span class="brand-mark" aria-hidden="true">V</span>
+      <span>
+        <strong>VLearn</strong>
+        <small>Diagnostic Lab</small>
+      </span>
+    </a>
+
+    <div class="topbar-center" aria-label="Trạng thái prototype">
+      <span class="status-dot" aria-hidden="true"></span>
+      Prototype dùng dữ liệu mô phỏng · Không tải dữ liệu thật
+    </div>
+
+    <button class="button button-ghost button-small" id="reset-all" type="button">
+      Reset toàn bộ
+    </button>
+  </header>
+
+  <main class="app-shell">
+    <aside class="context-panel" aria-labelledby="case-title">
+      <div class="eyebrow">COMMON CONTEXT</div>
+      <h1 id="case-title">PivotTable không cho kết quả như video</h1>
+      <p class="muted">Bạn đang học PivotTable để hoàn thành báo cáo doanh thu cuối ngày.</p>
+
+      <div class="lesson-card">
+        <div class="lesson-topline">
+          <span>Bài 4 · Tổng hợp doanh thu</span>
+          <span>06:42 / 12:10</span>
+        </div>
+        <div class="video-mock" role="img" aria-label="Video hướng dẫn kéo cột Doanh thu vào Values và nhận kết quả Sum">
+          <div class="play-button" aria-hidden="true">▶</div>
+          <div>
+            <strong>Trong video</strong>
+            <span>Values → Sum of Doanh thu</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fixture-card" aria-label="Dữ liệu cố định dùng cho cả ba phương án">
+        <div class="fixture-header">
+          <span>File của bạn</span>
+          <span class="file-chip">Bao-cao.xlsx</span>
+        </div>
+        <div class="pivot-preview">
+          <div class="pivot-row pivot-head"><span>Row Labels</span><span>Count of Doanh thu</span></div>
+          <div class="pivot-row"><span>Hà Nội</span><strong>214</strong></div>
+          <div class="pivot-row"><span>Đà Nẵng</span><strong>97</strong></div>
+          <div class="pivot-row"><span>TP.HCM</span><strong>286</strong></div>
+          <div class="pivot-row pivot-total"><span>Grand Total</span><strong>597</strong></div>
+        </div>
+        <div class="warning-strip">
+          <span aria-hidden="true">!</span>
+          Tùy chọn <strong>Sum</strong> đang bị mờ
+        </div>
+      </div>
+
+      <div class="task-card">
+        <div class="eyebrow">NHIỆM VỤ</div>
+        <p>Xác định điều cần kiểm tra, chọn cách xử lý an toàn, rồi quay lại tiếp tục bài học.</p>
+      </div>
+    </aside>
+
+    <section class="workspace" id="workspace" tabindex="-1">
+      <div class="workspace-head">
+        <div>
+          <div class="eyebrow" id="workspace-kicker">MICRO-PROTOTYPE TEST</div>
+          <h2 id="workspace-title">Ba cách để thoát khỏi điểm kẹt</h2>
+        </div>
+        <div class="trial-progress" id="trial-progress" aria-label="Tiến độ thử phương án"></div>
+      </div>
+
+      <nav class="option-tabs" aria-label="Chọn phương án để trải nghiệm">
+        <button class="option-tab option-a" data-option="a" type="button">
+          <span>A</span>
+          <span><strong>Bản đồ tự kiểm tra</strong><small>User-led</small></span>
+        </button>
+        <button class="option-tab option-b" data-option="b" type="button">
+          <span>B</span>
+          <span><strong>Đối thoại đồng chẩn đoán</strong><small>Ask → Act</small></span>
+        </button>
+        <button class="option-tab option-c" data-option="c" type="button">
+          <span>C</span>
+          <span><strong>AI kiểm tra artefact</strong><small>AI-led, user duyệt</small></span>
+        </button>
+      </nav>
+
+      <div id="prototype-stage" class="prototype-stage" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <dialog id="exit-dialog" class="dialog">
+    <form method="dialog">
+      <div class="dialog-icon" aria-hidden="true">↗</div>
+      <h2>Quay lại bài học?</h2>
+      <p>Tiến trình trong phương án hiện tại sẽ được giữ. Bạn có thể quay lại bất cứ lúc nào.</p>
+      <div class="dialog-actions">
+        <button class="button button-secondary" value="cancel">Ở lại</button>
+        <button class="button button-primary" value="confirm">Về bài học</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
