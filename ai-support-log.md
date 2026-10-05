@@ -29,10 +29,10 @@
 
 | Mục | Nội dung |
 |---|---|
-| Công cụ | *[Trang xác nhận: Codex / ChatGPT / công cụ khác]* |
+| Công cụ | Codex, Claude|
 | Mục đích | Viết nhanh giao diện HTML/CSS/JS cho micro-prototype; soạn canned AI output; sinh dữ liệu Excel mô phỏng (bảng doanh thu có cột bị lưu dạng text). |
 | Kết quả AI tạo ra | `prototype/index.html`, `app.js`, `styles.css`, bản build trong `prototype/dist/`; nội dung hội thoại/gợi ý dựng sẵn cho Option A/B/C. |
-| Phần tự chỉnh sửa / bác bỏ | Giữ chung context, task và data fixture cho cả ba option để so sánh công bằng. Thêm đường thoát về bài học, nút reset và cách quay lại ở mọi critical interaction. Dữ liệu là dữ liệu mô phỏng, không dùng dữ liệu thật của người tham gia Day 17. *[Trang bổ sung: các chỗ đã sửa trong code hoặc trong lời thoại AI]* |
+| Phần tự chỉnh sửa / bác bỏ | Giữ chung context, task và data fixture cho cả ba option để so sánh công bằng. Thêm đường thoát về bài học, nút reset và cách quay lại ở mọi critical interaction. Dữ liệu là dữ liệu mô phỏng, không dùng dữ liệu thật của người tham gia Day 17. 
 
 ### 3. Pilot Option B trước khi test thật
 
@@ -44,6 +44,3 @@
 | Phần tự chỉnh sửa / bác bỏ | Ghi rõ pilot **không phải tester ngoài nhóm** và **không dùng làm evidence** cho Gate 5. Nhóm tự quyết định sửa lỗi nào (commit `467db12` → `1ecec9c`). |
 
 
----
-
-> Ghi chú: các ô *[Trang bổ sung / xác nhận]* phải do chính người làm bài tự điền. Đó là phần đóng góp và quyết định cá nhân, AI không được viết thay.
